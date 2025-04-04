@@ -1,0 +1,66 @@
+.pool-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 70px);
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.pool-card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--card-border);
+}
+
+.pool-card h2 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.pool-info {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid var(--card-border);
+}
+
+.pool-info p {
+  color: var(--nav-link-color);
+  margin-bottom: 15px;
+}
+
+.add-liquidity-btn {
+  background-color: var(--nav-link-active-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.add-liquidity-btn:hover {
+  opacity: 0.8;
+}
+
+.your-liquidity h3 {
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.no-liquidity {
+  color: var(--nav-link-color);
+  text-align: center;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+}

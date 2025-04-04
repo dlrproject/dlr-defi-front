@@ -1,0 +1,448 @@
+/* 全局容器样式 */
+.swap-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* 屏幕分隔 */
+.screen-divider {
+  height: 0.0625rem;
+  background: linear-gradient(to right, transparent, var(--navbar-border), transparent);
+  margin: 1.5rem 0;
+}
+
+/* 屏幕内容容器 */
+.screen-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 卡片样式 */
+.swap-card,
+.stats-card,
+.pairs-card {
+  width: 100%;
+  max-width: 50rem;
+  background-color: var(--card-bg);
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  border: 0.0625rem solid var(--card-border);
+  overflow: hidden;
+}
+
+/* 第一屏卡片样式 */
+.swap-card {
+  padding: 1.5rem;
+}
+
+/* 统计卡片网格 */
+.stats-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 0.0625rem solid var(--card-border);
+}
+
+/* 输入框容器样式 */
+.token-input-container {
+  background-color: var(--input-bg) !important;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 0.0625rem solid var(--input-border);
+  transition: border-color 0.3s ease;
+  margin-bottom: 0.5rem;
+  min-height: 5rem;
+}
+
+.token-input-container:last-child {
+  margin-bottom: 0;
+}
+
+.token-input-container:hover {
+  border-color: var(--nav-link-active-color);
+}
+
+/* 交换方向按钮样式 */
+.swap-direction-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  margin: -0.5rem auto;
+  border: 0.25rem solid var(--background-color);
+  z-index: 2;
+  position: relative;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.swap-direction-button:hover {
+  background-color: var(--hover-bg);
+  transform: none !important;
+  color: var(--text-color);
+}
+
+/* 交换信息卡片样式 */
+.swap-info {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 0.0625rem solid var(--card-border);
+}
+
+/* 时间范围按钮组 */
+.time-range-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 统计数值样式 */
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--nav-link-color);
+}
+
+/* 热门交易对表格容器 */
+.pairs-table-container {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* 屏幕标题样式 */
+.screen-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* 代币图标样式 */
+.token-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  background-color: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: var(--text-color);
+}
+
+/* 加载动画 */
+.loading-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading-dots span {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--nav-link-active-color);
+  animation: loading 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes loading {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+/* 专家模式开关样式 */
+.expert-mode-switch {
+  margin-left: 0.5rem;
+}
+
+/* 信息提示图标样式 */
+.info-icon {
+  color: var(--nav-link-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.info-icon:hover {
+  color: var(--nav-link-active-color);
+}
+
+/* 余额显示样式 */
+.balance-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--nav-link-color);
+}
+
+/* 最大按钮样式 */
+.max-button {
+  color: var(--nav-link-active-color) !important;
+  font-weight: 500 !important;
+  padding: 0 !important;
+  height: auto !important;
+}
+
+.max-button:hover {
+  color: var(--nav-link-active-color) !important;
+  text-decoration: underline !important;
+}
+
+/* 价格变化指示器 */
+.price-change-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.price-change-indicator.up {
+  color: #10B981;
+}
+
+.price-change-indicator.down {
+  color: #EF4444;
+}
+
+/* 第一屏文字颜色调整 */
+.token-input-container .ant-input,
+.token-input-container .ant-select-selector {
+  color: var(--text-color);
+}
+
+.token-input-container .ant-input::placeholder {
+  color: var(--nav-link-color);
+}
+
+.token-input-container .ant-select-selection-placeholder {
+  color: var(--nav-link-color);
+}
+
+.token-input-container .ant-select-selection-item {
+  color: var(--text-color);
+}
+
+.token-input-container .ant-select-arrow {
+  color: var(--nav-link-color);
+}
+
+/* 下拉菜单样式 */
+.ant-select-dropdown {
+  background-color: var(--input-bg);
+  border: 0.0625rem solid var(--input-border);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  position: fixed;
+}
+
+.ant-select-item {
+  color: var(--text-color);
+  border-radius: 0.75rem;
+  margin: 0.25rem 0;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ant-select-item:hover {
+  background-color: var(--hover-bg);
+}
+
+.ant-select-item-option-selected {
+  background-color: var(--hover-bg);
+}
+
+.ant-select-item-option-active {
+  background-color: var(--hover-bg);
+}
+
+/* 交换信息文字颜色 */
+.swap-info .ant-typography {
+  color: var(--text-color);
+}
+
+.swap-info .ant-typography.ant-typography-secondary {
+  color: var(--nav-link-color);
+}
+
+/* 按钮文字颜色 */
+.ant-btn-primary {
+  color: #FFFFFF;
+  background-color: var(--nav-link-active-color);
+  border-color: var(--nav-link-active-color);
+}
+
+.ant-btn-primary:hover {
+  background-color: var(--nav-link-active-color);
+  border-color: var(--nav-link-active-color);
+  opacity: 0.8;
+}
+
+.ant-btn-default {
+  color: var(--text-color);
+  background-color: var(--button-bg);
+  border-color: var(--card-border);
+}
+
+.ant-btn-default:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--card-border);
+  color: var(--text-color);
+}
+
+/* 第一屏布局调整 */
+.swap-card .ant-card-body {
+  padding: 0;
+}
+
+.token-input-container .ant-input-affix-wrapper {
+  padding: 0;
+  background-color: transparent;
+}
+
+.token-input-container .ant-input {
+  padding: 0;
+  background-color: transparent;
+  font-size: 1.5rem;
+  height: 3rem;
+}
+
+.token-input-container .ant-select {
+  width: 100%;
+  position: relative;
+}
+
+.token-input-container .ant-select-selector {
+  padding: 0 0.75rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+}
+
+.token-input-container .ant-select-selection-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.token-input-container .ant-space {
+  display: flex;
+  align-items: center;
+}
+
+.token-input-container .ant-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.token-input-container .ant-input-group-addon {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.token-input-container .ant-input-group > .ant-input:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.token-input-container .ant-input-group > .ant-input:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.token-input-container .ant-input-group-addon:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.token-input-container .ant-input-group-addon:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* 交换按钮样式 */
+.swap-button {
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background-color: var(--nav-link-active-color);
+  border-color: var(--nav-link-active-color);
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.swap-button:hover {
+  background-color: var(--nav-link-active-color);
+  border-color: var(--nav-link-active-color);
+  opacity: 0.8;
+}
+
+.swap-button:disabled {
+  background-color: var(--button-bg);
+  border-color: var(--card-border);
+  color: var(--nav-link-color);
+}
+
+/* 确保下拉菜单正确定位 */
+.ant-select-dropdown-hidden {
+  display: none;
+}
+
+.ant-select-open .ant-select-dropdown {
+  display: block;
+}
